@@ -6,6 +6,7 @@ Plug 'vim-airline/vim-airline'
 " Files
 Plug 'kien/ctrlp.vim'
 Plug 'mbbill/undotree'
+Plug 'scrooloose/nerdtree'
 
 " Snippets
 Plug 'SirVer/ultisnips'
