@@ -91,6 +91,10 @@ nnoremap <leader>l <ESC>:set list!<CR>
 " toggle paste mode
 set pastetoggle=<F2>
 
+" relative line numbers
+nnoremap <F9> <ESC>:set number!<CR>
+nnoremap <F10> <ESC>:set relativenumber!<CR>
+
 " trim trailing whitespace
 nnoremap <leader>q <ESC>:%s/\s\+$//<CR>:noh<CR>
 
