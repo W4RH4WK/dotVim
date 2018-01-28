@@ -39,6 +39,7 @@ set noswapfile
 
 " Indent
 set copyindent
+set preserveindent
 "set ts=4 sw=4 et
 
 " New Windows
@@ -55,6 +56,7 @@ set smartcase
 
 " Spell
 set spelllang=en_gb
+syntax spell toplevel
 
 " Handling
 set nojoinspaces
@@ -84,8 +86,14 @@ noremap <c-f> <NOP>
 " macro replay
 vnoremap <silent> @ :normal @
 
+" switch auto-format
+nnoremap <leader>a <ESC>:set <C-R>=(&formatoptions =~# "a") ? "formatoptions-=a" : "formatoptions+=a")<CR><CR>
+
 " toggle list mode
 nnoremap <leader>l <ESC>:set list!<CR>
+
+" trim trailing whitespace
+nnoremap <leader>q <ESC>:%s/\s\+$//<CR>:noh<CR>
 
 " toggle paste mode
 set pastetoggle=<F2>
@@ -93,9 +101,6 @@ set pastetoggle=<F2>
 " relative line numbers
 nnoremap <F9> <ESC>:set number!<CR>
 nnoremap <F10> <ESC>:set relativenumber!<CR>
-
-" trim trailing whitespace
-nnoremap <leader>q <ESC>:%s/\s\+$//<CR>:noh<CR>
 
 " window movement
 nnoremap <c-h> <c-w>h
