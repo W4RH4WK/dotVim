@@ -15,7 +15,6 @@ Plug 'honza/vim-snippets'
 
 " Formatting
 Plug 'Chiel92/vim-autoformat'
-Plug 'Soares/smarttab.vim'
 
 " Comments
 Plug 'tomtom/tcomment_vim'
