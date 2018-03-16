@@ -5,7 +5,7 @@ hi clear
 
 let g:colors_name="molokai"
 
-hi  Normal          ctermfg=252     ctermbg=None                    guifg=#F8F8F2   guibg=#1B1D1E
+hi  Normal          ctermfg=252     ctermbg=none                    guifg=#F8F8F2   guibg=#1B1D1E
 hi  Comment         ctermfg=244                                     guifg=#7E8E91
 hi  CursorLine                      ctermbg=236     cterm=none                      guibg=#293739
 hi  CursorLineNr    ctermfg=208                     cterm=none      guifg=#FD971F
@@ -37,7 +37,7 @@ hi  ErrorMsg        ctermfg=199     ctermbg=16      cterm=bold      guifg=#F9267
 hi  Exception       ctermfg=154                     cterm=bold      guifg=#A6E22E
 hi  Float           ctermfg=141                                     guifg=#AE81FF
 hi  FoldColumn      ctermfg=67      ctermbg=16                      guifg=#465457   guibg=#000000
-hi  Folded          ctermfg=67      ctermbg=None                    guifg=#465457   guibg=#000000
+hi  Folded          ctermfg=67      ctermbg=none                    guifg=#465457   guibg=#000000
 hi  Function        ctermfg=154                                     guifg=#A6E22E
 hi  Identifier      ctermfg=208                     cterm=none      guifg=#FD971F
 hi  Ignore          ctermfg=244     ctermbg=232                     guifg=#808080   guibg=bg
@@ -90,8 +90,8 @@ hi  Visual                          ctermbg=238                                 
 hi  WarningMsg      ctermfg=231     ctermbg=238     cterm=bold      guifg=#FFFFFF   guibg=#333333
 hi  WildMenu        ctermfg=81      ctermbg=16                      guifg=#66D9EF   guibg=#000000
 
+hi  TabLine         ctermfg=none                                    guifg=#808080   guibg=#1B1D1E
 hi  TabLineFill                                                     guifg=#444444   guibg=#444444
-hi  TabLine                                                         guifg=#808080   guibg=#1B1D1E
 
 if has("spell")
     hi  SpellBad                        ctermbg=52                                      guibg=#5F0000   gui=none
