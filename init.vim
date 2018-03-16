@@ -3,11 +3,20 @@ call plug#begin('~/.config/nvim/plugged')
 " Visual
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
+Plug 'lilydjwg/colorizer'
 
 " Files
+Plug 'Numkil/ag.nvim'
 Plug 'kien/ctrlp.vim'
 Plug 'mbbill/undotree'
 Plug 'scrooloose/nerdtree'
+
+" Completion
+"Plug 'naquad/ctrlp-digraphs.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+" Debugging
+Plug 'huawenyu/neogdb.vim'
 
 " Snippets
 Plug 'SirVer/ultisnips'
@@ -27,11 +36,12 @@ call plug#end()
 " -------------------------------------------------- Base
 
 " Visual
+set display+=lastline
 set listchars=tab:>\ ,eol:¬,trail:.
+set noshowmode
 set nowrap
 set scrolloff=1
 set sidescrolloff=5
-set display+=lastline
 
 " File
 set autoread
@@ -60,6 +70,7 @@ syntax spell toplevel
 
 " Handling
 set nojoinspaces
+set nostartofline
 set nrformats-=octal
 
 " -------------------------------------------------- Theme
@@ -87,7 +98,7 @@ noremap <c-f> <NOP>
 vnoremap <silent> @ :normal @
 
 " switch auto-format
-nnoremap <leader>a <ESC>:set <C-R>=(&formatoptions =~# "a") ? "formatoptions-=a" : "formatoptions+=a")<CR><CR>
+nnoremap <leader>a <ESC>:set <C-R>=(&formatoptions =~# "a") ? "formatoptions-=a" : "formatoptions+=a"<CR><CR>
 
 " toggle list mode
 nnoremap <leader>l <ESC>:set list!<CR>
