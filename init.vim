@@ -1,34 +1,42 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " Visual
-Plug 'airblade/vim-gitgutter'
+"Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
-Plug 'lilydjwg/colorizer'
+"Plug 'lilydjwg/colorizer'
+
+" Handling
+Plug 'tpope/vim-unimpaired'
 
 " Files
 Plug 'Numkil/ag.nvim'
 Plug 'kien/ctrlp.vim'
 Plug 'mbbill/undotree'
-Plug 'scrooloose/nerdtree'
+"Plug 'scrooloose/nerdtree'
+
+" Git
+"Plug 'tpope/vim-fugitive'
 
 " Completion
 "Plug 'naquad/ctrlp-digraphs.vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Debugging
 Plug 'huawenyu/neogdb.vim'
 
 " Snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
 
 " Formatting
 Plug 'Chiel92/vim-autoformat'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'powerman/vim-plugin-AnsiEsc'
 
 " Comments
 Plug 'tomtom/tcomment_vim'
 
-" Markdown / Pandoc
+" Syntax
 Plug 'vim-pandoc/vim-pandoc-syntax'
 
 call plug#end()
