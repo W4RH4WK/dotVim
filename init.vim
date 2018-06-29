@@ -50,7 +50,7 @@ set noswapfile
 " Indent
 set copyindent
 set preserveindent
-"set ts=4 sw=4 et
+set ts=4 sw=4 et
 
 " New Windows
 set splitbelow
@@ -69,6 +69,7 @@ set spelllang=en_gb
 syntax spell toplevel
 
 " Handling
+set formatoptions=cjqrt
 set nojoinspaces
 set nostartofline
 set nrformats-=octal
