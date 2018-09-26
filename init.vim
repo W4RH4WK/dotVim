@@ -1,40 +1,28 @@
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 
 " Visual
-"Plug 'airblade/vim-gitgutter'
-Plug 'vim-airline/vim-airline'
-"Plug 'lilydjwg/colorizer'
+Plug 'itchyny/lightline.vim'
 
 " Handling
+Plug 'dbakker/vim-projectroot'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 
 " Files
 Plug 'Numkil/ag.nvim'
 Plug 'kien/ctrlp.vim'
 Plug 'mbbill/undotree'
-"Plug 'scrooloose/nerdtree'
-
-" Git
-"Plug 'tpope/vim-fugitive'
-
-" Completion
-"Plug 'naquad/ctrlp-digraphs.vim'
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
 
 " Debugging
 Plug 'huawenyu/neogdb.vim'
-
-" Snippets
-"Plug 'SirVer/ultisnips'
-"Plug 'honza/vim-snippets'
 
 " Formatting
 Plug 'Chiel92/vim-autoformat'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'powerman/vim-plugin-AnsiEsc'
-
-" Comments
-Plug 'tomtom/tcomment_vim'
 
 " Syntax
 Plug 'vim-pandoc/vim-pandoc-syntax'
@@ -69,7 +57,6 @@ set clipboard+=unnamedplus
 
 " Search
 set ignorecase
-"set nohlsearch
 set smartcase
 
 " Spell
@@ -82,19 +69,32 @@ set nojoinspaces
 set nostartofline
 set nrformats-=octal
 
+let g:netrw_dirhistmax = 0
+
 " -------------------------------------------------- Theme
 
 set background=dark
 colorscheme molokai
 
+let g:lightline = { 'colorscheme': 'wombat' }
+
 " -------------------------------------------------- Cursor Position
 
 autocmd BufReadPost *
-	\  if line("'\"") > 1 && line("'\"") <= line("$")
-	\|   exe 'normal! g`"zvzz'
-	\| endif
+    \  if line("'\"") > 1 && line("'\"") <= line("$")
+    \|   exe 'normal! g`"zvzz'
+    \| endif
+
+" -------------------------------------------------- Plugins
+
+" NeoGDB
+let g:neobugger_leader = ';'
 
 " -------------------------------------------------- Keybindings
+
+" AutoFormat
+nnoremap <leader>f :Autoformat<CR>
+vnoremap <leader>f :Autoformat<CR>
 
 " disable Ex mode
 nnoremap Q nop
@@ -103,30 +103,27 @@ nnoremap Q nop
 noremap <c-b> <NOP>
 noremap <c-f> <NOP>
 
+" Explorer
+noremap <leader>n :NERDTreeToggle<CR>
+
 " macro replay
 vnoremap <silent> @ :normal @
 
-" switch auto-format
-nnoremap <leader>a <ESC>:set <C-R>=(&formatoptions =~# "a") ? "formatoptions-=a" : "formatoptions+=a"<CR><CR>
+" SmartTab
+inoremap <S-TAB> <TAB>
+inoremap <TAB> <C-R>=SmartTab()<CR>
 
-" toggle list mode
-nnoremap <leader>l <ESC>:set list!<CR>
+" switch auto wordwrap
+nnoremap <leader>a :set <C-R>=(&formatoptions =~# "a") ? "formatoptions-=a" : "formatoptions+=a"<CR><CR>
+
+" terminal exit
+tnoremap <esc> <c-\><c-n>
 
 " trim trailing whitespace
-nnoremap <leader>q <ESC>:%s/\s\+$//<CR>:noh<CR>
-
-" toggle paste mode
-set pastetoggle=<F2>
-
-" relative line numbers
-nnoremap <F9> <ESC>:set number!<CR>
-nnoremap <F10> <ESC>:set relativenumber!<CR>
+nnoremap <leader>q :%s/\s\+$//<CR>:noh<CR>
 
 " window movement
 nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
-
-" terminal exit
-tnoremap <esc> <c-\><c-n>
