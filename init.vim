@@ -10,7 +10,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 
 " Files
-Plug 'Numkil/ag.nvim'
+Plug 'mileszs/ack.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-fugitive'
@@ -32,15 +32,14 @@ call plug#end()
 " -------------------------------------------------- Base
 
 " Visual
-set display+=lastline
 set listchars=tab:>\ ,eol:¬,trail:.
 set noshowmode
 set nowrap
 set scrolloff=1
-set sidescrolloff=5
+set foldlevel=1
 
 " File
-set autoread
+set autowrite
 set noswapfile
 
 " Indent
@@ -87,6 +86,11 @@ autocmd BufReadPost *
 
 " -------------------------------------------------- Plugins
 
+" Ack
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
+
 " NeoGDB
 let g:neobugger_leader = ';'
 
@@ -95,6 +99,9 @@ let g:neobugger_leader = ';'
 " AutoFormat
 nnoremap <leader>f :Autoformat<CR>
 vnoremap <leader>f :Autoformat<CR>
+
+" build
+nnoremap <leader>m :silent make\|redraw!\|cc<CR>
 
 " disable Ex mode
 nnoremap Q nop
@@ -115,6 +122,9 @@ inoremap <TAB> <C-R>=SmartTab()<CR>
 
 " switch auto wordwrap
 nnoremap <leader>a :set <C-R>=(&formatoptions =~# "a") ? "formatoptions-=a" : "formatoptions+=a"<CR><CR>
+
+" tags
+nnoremap <leader>t :CtrlPTag<CR>
 
 " terminal exit
 tnoremap <esc> <c-\><c-n>
