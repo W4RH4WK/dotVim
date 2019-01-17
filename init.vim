@@ -64,6 +64,7 @@ syntax spell toplevel
 
 " Handling
 set formatoptions=cjqrt
+set mouse=a
 set nojoinspaces
 set nostartofline
 set nrformats-=octal
