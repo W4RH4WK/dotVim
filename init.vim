@@ -101,6 +101,9 @@ let g:neobugger_leader = ';'
 nnoremap <leader>f :Autoformat<CR>
 vnoremap <leader>f :Autoformat<CR>
 
+" Ag
+nnoremap <leader>g :Ack<space>
+
 " build
 nnoremap <leader>m :silent make\|redraw!\|cc<CR>
 
