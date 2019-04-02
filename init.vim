@@ -32,7 +32,7 @@ call plug#end()
 " -------------------------------------------------- Base
 
 " Visual
-set listchars=tab:>\ ,eol:¬,trail:.
+set listchars=tab:»\ ,eol:¬,trail:.
 set noshowmode
 set nowrap
 set scrolloff=1
@@ -45,7 +45,7 @@ set noswapfile
 " Indent
 set copyindent
 set preserveindent
-set ts=4 sw=4 et
+"set ts=4 sw=4 et
 
 " New Windows
 set splitbelow
