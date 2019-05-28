@@ -10,11 +10,12 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 
 " Files
-Plug 'mileszs/ack.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'mbbill/undotree'
-Plug 'tpope/vim-fugitive'
+Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/repeat.vim'
+Plug 'tpope/vim-fugitive'
 
 " Debugging
 Plug 'huawenyu/neogdb.vim'
