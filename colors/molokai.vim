@@ -26,10 +26,10 @@ hi  Debug           ctermfg=225                     cterm=bold      guifg=#BCA3A
 hi  Define          ctermfg=81                                      guifg=#66D9EF
 hi  Delimiter       ctermfg=241                                     guifg=#8F8F8F
 
-hi  DiffAdd                         ctermbg=24                                      guibg=#13354A
-hi  DiffChange      ctermfg=181     ctermbg=239                     guifg=#89807D   guibg=#4C4745
-hi  DiffDelete      ctermfg=125     ctermbg=233                     guifg=#960050   guibg=#1E0010
-hi  DiffText                        ctermbg=102     cterm=bold                      guibg=#4C4745
+hi  DiffAdd         ctermfg=none    ctermbg=none    cterm=none                      guibg=none
+hi  DiffChange      ctermfg=none    ctermbg=none    cterm=none      guifg=none      guibg=none
+hi  DiffDelete      ctermfg=none    ctermbg=none    cterm=none      guifg=none      guibg=none
+hi  DiffText        ctermfg=none    ctermbg=none    cterm=none                      guibg=none
 
 hi  Directory       ctermfg=154                     cterm=bold      guifg=#A6E22E
 hi  Error           ctermfg=222     ctermbg=89                      guifg=#E6DB74   guibg=#1E0010
