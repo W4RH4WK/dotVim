@@ -126,7 +126,7 @@ inoremap <S-TAB> <TAB>
 inoremap <TAB> <C-R>=SmartTab()<CR>
 
 " switch auto wordwrap
-nnoremap <leader>a :set <C-R>=(&formatoptions =~# "a") ? "formatoptions-=a" : "formatoptions+=a"<CR><CR>
+nnoremap yof :setlocal <C-R>=(&formatoptions =~# "a") ? "formatoptions-=a" : "formatoptions+=a"<CR><CR>
 
 " tags
 nnoremap <leader>t :CtrlPTag<CR>
