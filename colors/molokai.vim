@@ -26,8 +26,8 @@ hi  Debug           ctermfg=225                     cterm=bold      guifg=#BCA3A
 hi  Define          ctermfg=81                                      guifg=#66D9EF
 hi  Delimiter       ctermfg=241                                     guifg=#8F8F8F
 
-hi  DiffAdd         ctermfg=208     ctermbg=none    cterm=none      guifg=#FD971F   guibg=none
-hi  DiffChange      ctermfg=154     ctermbg=none    cterm=none      guifg=#A6E22E   guibg=none
+hi  DiffAdd         ctermfg=154     ctermbg=none    cterm=none      guifg=#A6E22E   guibg=none
+hi  DiffChange      ctermfg=208     ctermbg=none    cterm=none      guifg=#FD971F   guibg=none
 hi  DiffDelete      ctermfg=81      ctermbg=none    cterm=none      guifg=#66D9EF   guibg=none
 hi  DiffText        ctermfg=197     ctermbg=none    cterm=none      guifg=#F92672   guibg=none
 
