@@ -4,24 +4,24 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'itchyny/lightline.vim'
 
 " Handling
-Plug 'dbakker/vim-projectroot'
+"Plug 'dbakker/vim-projectroot'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 
 " Files
 Plug 'kien/ctrlp.vim'
-Plug 'mbbill/undotree'
+"Plug 'mbbill/undotree'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/repeat.vim'
-Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-fugitive'
 
 " Debugging
-Plug 'huawenyu/neogdb.vim'
+"Plug 'huawenyu/neogdb.vim'
 
 " Formatting
-Plug 'Chiel92/vim-autoformat'
+"Plug 'Chiel92/vim-autoformat'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'powerman/vim-plugin-AnsiEsc'
 
@@ -44,8 +44,8 @@ set autowrite
 set noswapfile
 
 " Indent
-set copyindent
-set preserveindent
+"set copyindent
+"set preserveindent
 "set ts=4 sw=4 et
 
 " New Windows
@@ -85,6 +85,11 @@ autocmd BufReadPost *
     \  if line("'\"") > 1 && line("'\"") <= line("$")
     \|   exe 'normal! g`"zvzz'
     \| endif
+
+" -------------------------------------------------- Xserver
+if empty($DISPLAY)
+    let $DISPLAY = 'localhost:0'
+endif
 
 " -------------------------------------------------- Plugins
 
