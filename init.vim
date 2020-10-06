@@ -38,6 +38,7 @@ set noshowmode
 set nowrap
 set scrolloff=1
 set foldlevel=1
+set guicursor=
 
 " File
 set autowrite
