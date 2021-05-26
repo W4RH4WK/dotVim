@@ -5,6 +5,7 @@ Plug 'itchyny/lightline.vim'
 
 " Handling
 "Plug 'dbakker/vim-projectroot'
+Plug 'rhysd/clever-f.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
@@ -14,8 +15,8 @@ Plug 'kien/ctrlp.vim'
 "Plug 'mbbill/undotree'
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'tpope/repeat.vim'
 "Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
 
 " Debugging
 "Plug 'huawenyu/neogdb.vim'
@@ -33,12 +34,14 @@ call plug#end()
 " -------------------------------------------------- Base
 
 " Visual
+set linebreak
 set listchars=tab:»\ ,eol:¬,trail:.
 set noshowmode
 set nowrap
-set scrolloff=1
+set scrolloff=6
 set foldlevel=1
 set guicursor=
+syntax sync fromstart
 
 " File
 set autowrite
